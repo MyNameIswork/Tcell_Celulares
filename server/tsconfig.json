@@ -1,0 +1,49 @@
+{
+    // Visit https://aka.ms/tsconfig to read more about this file
+    "compilerOptions": {
+        //"allowImportingTsExtensions": true,
+        "rootDir": "./src",
+        "outDir": "./build/src",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "ignoreDeprecations": "6.0",
+        "strict": true,
+        "allowJs": false,
+        "pretty": true,
+        "skipDefaultLibCheck": false,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "skipLibCheck": true,
+        "moduleDetection": "force",
+        "noUncheckedSideEffectImports": true,
+        "resolveJsonModule": true,
+        "removeComments": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noStrictGenericChecks": false,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true, //Alterado pq está dando error no import do fs
+        "noFallthroughCasesInSwitch": true,
+        "noErrorTruncation": true,
+        "noEmitOnError": true,
+        "noEmitHelpers": true,
+        "noEmit": false,
+        "declaration": false,
+        "exactOptionalPropertyTypes": true,
+        "maxNodeModuleJsDepth": 0,
+        "moduleResolution": "nodenext",
+        "lib": ["ES2023"],
+        "module": "nodenext",
+        "target": "ES2023",
+        "types": ["node"],
+        "typeRoots": ["./src/types", "./node_modules/@types"]
+    },
+    "exclude": ["node_modules", "./build"],
+    "include": ["src/**/*"]
+}
