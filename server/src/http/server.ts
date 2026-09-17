@@ -24,6 +24,12 @@ app.use("/", (req: Request, _, next: NextFunction) => {
     console.log(`Method: ${req.method} | Path: ${req.path}`);
     next();
 });
+
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+    console.error("Erro não tratado:", err);
+    res.status(500).json({ message: "Erro interno no servidor" });
+});
+
 app.use("/api/v1", router);
 
 const port = Number(process.env.PORT) || 3000;
