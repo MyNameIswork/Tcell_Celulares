@@ -25,7 +25,7 @@ app.use("/", (req: Request, _, next: NextFunction) => {
     next();
 });
 
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
     console.error("Erro não tratado:", err);
     res.status(500).json({ message: "Erro interno no servidor" });
 });
